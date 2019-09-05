@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tws.repository.SubscribePackageMapper">
+    <select id="selectAll" resultType="tws.entity.SubscribePackage">
+        select * from `subscribePackage`;
+    </select>
+
+    <insert id="insert" parameterType="tws.entity.SubscribePackage">
+       insert into `subscribePackage` (`billNo`,`subscribeTime`) 
+       values (#{subscribePackage.billNo},#{subscribePackage.subscribeTime});
+    </insert>
+</mapper>

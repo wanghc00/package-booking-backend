@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tws.repository.PackageStorageMapper">
+    <select id="selectAll" resultType="tws.entity.PackageStorage">
+        select * from `packageStorage`;
+    </select>
+
+    <insert id="insert" parameterType="tws.entity.PackageStorage">
+       insert into `packageStorage` (`billNo`,`receivePerson`,`telephone`,`packageWeight`) values(#{packageStorage.billNo},#{packageStorage.receivePerson},#{packageStorage.telephone},#{packageStorage.packageWeight});
+    </insert>
+</mapper>
